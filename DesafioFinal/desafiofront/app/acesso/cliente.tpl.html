@@ -1,0 +1,100 @@
+<!-- ### REGISTER FORM ### -->
+<div ng-controller="AcessoController as vm" class="row justify-content-center align-items-center login-row">
+    <div class="col">
+        <div class="container mx-auto py-5 mt-5 jumbotron" style="width: 600px;">
+            <h3 class="text-center text-uppercase">Cadastrar</h3>
+            <form name="vm.cadForm" ng-submit="vm.logado = true;">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input class="form-control" type="text" name="nomeCompleto"  minlength="3" maxlength="100" ng-model="vm.user.nome"
+                        ng-required="true" placeholder="Nome completo">
+                    <small ng-show="vm.cadForm.nomeCompleto.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>CPF</label>
+                    <input class="form-control" type="number"  type="text" name="cpf" ng-model="vm.cpf"
+                        ng-required="true" placeholder="CPF">
+                    <small ng-show=""
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label>CEP</label>
+                    <input class="form-control" type="number" name="cep" ng-model="vm.user.cep"
+                        ng-required="true" placeholder="CEP">
+                    <small ng-show="vm.cadForm.username.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Logradouro</label>
+                    <input class="form-control" type="text" name="logradouro" ng-model="vm.user.logradouro"
+                        ng-required="true" placeholder="Logradouro">
+                    <small ng-show="vm.cadForm.username.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Complemento</label>
+                    <input class="form-control" type="text" name="complemento" ng-model="vm.user.complemento"
+                        ng-required="true" placeholder="Complemento">
+                    <small ng-show="vm.cadForm.username.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Bairro</label>
+                    <input class="form-control" type="text" name="bairro" ng-model="vm.user.bairro"
+                        ng-required="true" placeholder="Bairro">
+                    <small ng-show="vm.cadForm.username.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Cidade</label>
+                    <input class="form-control" type="text" name="cidade" ng-model="vm.user.cidade"
+                        ng-required="true" placeholder="Cidade">
+                    <small ng-show="vm.cadForm.username.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>UF</label>
+                    <input class="form-control" type="text" name="UF" ng-model="vm.user.uf"
+                        ng-required="true" placeholder="UF">
+                    <small ng-show="vm.cadForm.email.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input class="form-control" type="email" name="email" ng-model="vm.user.email"
+                        ng-required="true" placeholder="Endereço de e-mail">
+                    <small ng-show="vm.cadForm.email.$error.required && vm.validar"
+                        class="form-text text-danger">
+                        Campo obrigatório!
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Contato</label>
+                    <input class="form-control" type="tel" name="contato" ng-model="vm.user.contato"
+                        ng-required="true" placeholder="Contato">
+                </div>
+                <button class="btn btn-primary mb-1" type="submit" ng-click="vm.validar = true;">
+                    Cadastrar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
